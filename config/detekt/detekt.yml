@@ -736,10 +736,10 @@ style:
   UnusedPrivateClass:
     active: true
   UnusedPrivateMember:
-    active: false
+    active: true
     allowedNames: ''
   UnusedPrivateProperty:
-    active: false
+    active: true
     allowedNames: '_|ignored|expected|serialVersionUID'
   UseAnyOrNoneInsteadOfFind:
     active: true
@@ -1051,23 +1051,3 @@ formatting:
     autoCorrect: true
     indentSize: 4
     maxLineLength: 120
-
-libraries:
-  active: true
-  ForbiddenPublicDataClass:
-    active: true
-    ignorePackages:
-      - '*.internal'
-      - '*.internal.*'
-  LibraryCodeMustSpecifyReturnType:
-    active: true
-    allowOmitUnit: false
-  LibraryEntitiesShouldNotBePublic:
-    active: true
-
-ruleauthors:
-  active: true
-  UseEntityAtName:
-    active: true
-  ViolatesTypeResolutionRequirements:
-    active: true

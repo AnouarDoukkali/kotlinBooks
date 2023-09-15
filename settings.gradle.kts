@@ -18,5 +18,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EditProjectNameHere"
+rootProject.name = "kotlinBooks"
 include("app")

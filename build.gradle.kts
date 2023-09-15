@@ -7,4 +7,4 @@ plugins {
 
 group = "org.anouar.kotlinBooks"
 version = "v0.1.0"
-description = "new kotlin project template"
+description = "kotlin books project"

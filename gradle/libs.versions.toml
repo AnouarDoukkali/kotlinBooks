@@ -1,0 +1,14 @@
+[versions]
+dependencyUpdates = "0.48.0"
+detekt = "1.23.1"
+kotlin = "1.9.10"
+toolchainsResolver = "0.7.0"
+
+[plugins]
+dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "dependencyUpdates" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+toolchainsResolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "toolchainsResolver" }
+
+[libraries]
+detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }

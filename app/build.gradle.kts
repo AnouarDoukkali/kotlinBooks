@@ -1,5 +1,5 @@
 plugins {
-    id("com.anouar.kotestImplementation")
+    id("KotestImplementation")
     alias(libs.plugins.kotlin)
     application
 }

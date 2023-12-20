@@ -10,5 +10,9 @@ gradlePlugin {
             id = "my-plugin"
             implementationClass = "convention.plugins.MyPlugin"
         }
+        create("kotestImplementation") {
+            id = "com.anouar.kotestImplementation"
+            implementationClass = "com.anouar.convention.plugins.KotestImplementation"
+        }
     }
 }

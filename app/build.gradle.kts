@@ -1,16 +1,7 @@
 plugins {
+    id("com.anouar.kotestImplementation")
     alias(libs.plugins.kotlin)
     application
-}
-
-dependencies {
-    testImplementation(libs.kotest.runner)
-    testImplementation(libs.kotest.assertion)
-    testImplementation(libs.kotest.properties)
-}
-
-tasks.withType<Test>().configureEach {
-    useJUnitPlatform()
 }
 
 kotlin {

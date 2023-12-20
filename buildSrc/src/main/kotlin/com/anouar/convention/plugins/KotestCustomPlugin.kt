@@ -8,7 +8,7 @@ import org.gradle.kotlin.dsl.withType
 
 // implementing a custom plugin using a dedicated class
 
-class KotestImplementation : Plugin<Project> {
+class KotestCustomPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.plugins.apply("java")
         // set default version if property is not set in gradle.properties

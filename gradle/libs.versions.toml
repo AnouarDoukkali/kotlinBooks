@@ -1,7 +1,7 @@
 [versions]
 dependencyUpdates = "0.50.0"
 detekt = "1.23.4"
-kotlin = "1.9.21"
+kotlin = "1.9.22"
 toolchainsResolver = "0.7.0"
 kotest = "5.8.0"
 [plugins]

@@ -18,3 +18,4 @@ rootProject.name = "kotlinBooks"
 include("app")
 include("model")
 include("view")
+include("kotest")

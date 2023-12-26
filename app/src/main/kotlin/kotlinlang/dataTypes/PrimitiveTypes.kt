@@ -27,7 +27,7 @@ private fun shorts() {
 }
 
 // Int
-private fun ints() {
+private fun integer() {
     val i = 10 // Int by default
     val million = 1_000_000 // For readability, Kotlin allows underscores within numerical values.
     val intMAX = Int.MAX_VALUE
@@ -58,6 +58,14 @@ private fun doubles() {
     val doubleMAX = Double.MAX_VALUE
     val doubleMIN = Double.MIN_VALUE
     println("d=$d is of type DOUBLE, the max value is: $doubleMAX, the min value is: $doubleMIN")
+}
+
+// there is also unsigned types , those are positive and are more larger since they don't contain negative values
+private fun unsignedTypes() {
+    val u: UInt = 5u // Unsigned by default
+    val unsignedMAX = UInt.MAX_VALUE
+    val unsignedMIN = UInt.MIN_VALUE
+    println("u=$u is of type UNSIGNED Int, the max value is: $unsignedMAX, the min value is: $unsignedMIN")
 }
 
 private fun additionResult() {

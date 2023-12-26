@@ -1,4 +1,4 @@
-package kotlinlang.functions
+package kotlinlang.extensions
 
 import java.util.Locale
 

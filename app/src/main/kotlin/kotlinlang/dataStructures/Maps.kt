@@ -20,6 +20,10 @@ private fun mapsOperations() {
     val map1 = mapOf(1 to "one", 2 to "two", 3 to "three")
     println(map1.getValue(1)) // get value by key, throw exception if not found
     println(map1[10]) // get value by key , return null if not found
+    // looping on map
+    for ((key, value) in map1) {
+        println("$key : $value")
+    }
 }
 
 fun main() {

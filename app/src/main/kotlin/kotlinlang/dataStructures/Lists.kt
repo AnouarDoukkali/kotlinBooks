@@ -28,11 +28,21 @@ private fun iteratingLists() {
     for (i in list) {
         println(i)
     }
-    for (i in list.indices) {
-        println("list[$i] = ${list[i]}")
+    // loop list indexes with their values
+    for ((index, value) in list.withIndex()) {
+        println("$index : $value")
     }
 }
 
-// fun main(){
-//     iteratingLists()
-// }
+private class ListsOperation(
+    private val list: List<Int> = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+) {
+    fun joinToString() {
+        val str = list.joinToString(separator = "|", prefix = "#", postfix = "#")
+        println(str)
+    }
+}
+
+fun main() {
+    val op = ListsOperation()
+}

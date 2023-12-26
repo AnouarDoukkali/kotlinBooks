@@ -7,3 +7,10 @@ private fun stringTemplates() {
     println("printing special characters  quote:\" dollar:\$ ") // printing special characters using backslashes '\'
     println("""   "we can escape single quotes inside triple quotes"  """)
 }
+private fun trimIndent(): String {
+    return """
+        this is    
+        a multiline   
+        string   
+    """.trimIndent() // remove the common indentation in all lines
+}

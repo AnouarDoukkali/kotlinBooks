@@ -14,7 +14,3 @@ private fun pairDestructingDeclarations() {
     println(first)
     println(second)
 }
-
-fun main() {
-    pairDestructingDeclarations()
-}

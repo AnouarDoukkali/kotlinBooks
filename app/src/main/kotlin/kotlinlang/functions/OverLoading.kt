@@ -12,8 +12,3 @@ private class OverLoaded {
 
 // if extension function has the signature of member function ,which is nonsense , kotlin prioritize member function
 private fun OverLoaded.greeting(name: String) = println("extension function :  $name")
-
-fun main() {
-    val ov = OverLoaded()
-    ov.greeting("anouar")
-}

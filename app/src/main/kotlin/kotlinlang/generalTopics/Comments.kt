@@ -5,5 +5,5 @@ package kotlinlang.generalTopics
 /* this is also a comment */
 
 /** this is a comment
- used for documentation
+used for documentation
  */

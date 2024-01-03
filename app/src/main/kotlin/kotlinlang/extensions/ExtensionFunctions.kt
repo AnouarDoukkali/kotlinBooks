@@ -1,11 +1,11 @@
 package kotlinlang.extensions
 
-import java.util.Locale
+import java.util.*
 
-/*
+/**
 adding an extension count to the Class String
 to work with this extension in another package , you should import it as kotlin lang.functions.count
-*/
+ */
 private fun String.simpleCount() {
     println("$this contains ${this.length} elements") // we reference to the concerned element by this
 }
@@ -19,17 +19,11 @@ private fun String.advancedCount() {
 }
 // ----------------------------------------------------------------------
 
-class Animal(val name: String, val age: Int) {
+private class Animal(val name: String = "", val age: Int = 0) {
     fun roar() = "hello $name"
 }
 
 // extension functions can be private like member functions
 private fun Animal.information() {
     println("name ${this.name} age: ${this.age}")
-}
-
-fun main() {
-    val name = "anouar"
-    // name.count()
-    name.advancedCount()
 }

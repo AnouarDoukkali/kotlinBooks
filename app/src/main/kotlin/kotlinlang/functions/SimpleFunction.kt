@@ -20,7 +20,3 @@ private fun oneLineReturn(a: Int, b: Int) = """
     | that has an expression body. ${a + b}
     | 
 """.trimMargin()
-
-fun main(args: Array<String>) {
-    println("the main function also returns unit")
-}

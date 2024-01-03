@@ -37,7 +37,3 @@ fun doWhileLoop() {
         nums.add(i)
     } while (i < 100)
 }
-
-fun main() {
-    whileLoop()
-}

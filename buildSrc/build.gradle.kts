@@ -12,11 +12,11 @@ gradlePlugin {
     plugins {
         create("myPlugins") {
             id = "my-plugin"
-            implementationClass = "com.anouar.convention.plugins.MyPlugin"
+            implementationClass = "convention.plugins.MyPlugin"
         }
         create("KotestCustomPlugin") {
             id = "com.anouar.KotestCustomPlugin"
-            implementationClass = "com.anouar.convention.plugins.KotestCustomPlugin"
+            implementationClass = "convention.plugins.KotestCustomPlugin"
         }
     }
 }

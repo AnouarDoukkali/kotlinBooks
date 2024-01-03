@@ -5,8 +5,3 @@ package kotlinlang.generics
 private class GenericHolder<T>(private val value: T) {
     fun getValue(): T = value
 }
-
-fun main() {
-    val i: GenericHolder<Int> = GenericHolder(5)
-    println(i.getValue())
-}

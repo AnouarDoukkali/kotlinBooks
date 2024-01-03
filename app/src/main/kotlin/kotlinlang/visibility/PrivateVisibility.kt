@@ -15,7 +15,3 @@ private fun helloMember() {
 
     println("index: $index , name: $animal") // animal.toString is called here
 }
-
-fun main() {
-    helloMember()
-}

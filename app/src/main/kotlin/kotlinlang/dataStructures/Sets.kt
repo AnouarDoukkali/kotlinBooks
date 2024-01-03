@@ -20,7 +20,3 @@ private fun iteratingSets() {
         println(i)
     }
 }
-
-fun main() {
-    initializingSets()
-}

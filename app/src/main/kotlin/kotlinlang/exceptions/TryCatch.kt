@@ -1,9 +1,9 @@
 package kotlinlang.exceptions
 
 // try catch block
-private fun calculate() {
+private fun calculate(number: Int) {
     try {
-        println(5 / 0)
+        println(5 / number)
     } catch (e: ArithmeticException) {
         print(e.localizedMessage)
     } finally {
@@ -14,12 +14,6 @@ private fun calculate() {
 @Suppress("UseRequire")
 // throwing an exception
 private fun forbiddenName(name: String) {
-    if (name == "danger") throw IllegalArgumentException("this name is forbidden")
+    require(name != "danger ") { "this name is forbidden" }
     require(name != "fatal") // will also throw an exception if name is 'fatal'
-}
-
-fun main() {
-    calculate()
-    // forbiddenName("danger")
-    // forbiddenName("fatal")
 }

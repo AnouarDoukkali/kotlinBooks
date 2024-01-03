@@ -14,7 +14,3 @@ fun increment() {
     println(i++ + ++i) // Kotlin sets i to 1, increments it to 2, increments it again to 3, and then adds the resulting
 // value of i (3) to the initial value (1), giving us (1 + 3)
 }
-
-fun main() {
-    increment()
-}

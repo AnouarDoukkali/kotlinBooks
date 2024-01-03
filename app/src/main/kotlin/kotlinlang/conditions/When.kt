@@ -40,7 +40,3 @@ private fun whenReturn(number: Int): String {
         else -> "something else"
     }
 }
-
-fun main() {
-    whenExpression2(3)
-}

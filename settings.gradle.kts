@@ -1,3 +1,5 @@
+// enableFeaturePreview("STABLE_CONFIGURATION_CACHE") --give warning when building the file
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     repositories {
         mavenCentral()
@@ -18,4 +20,3 @@ rootProject.name = "kotlinBooks"
 include("app")
 include("model")
 include("view")
-include("kotest")

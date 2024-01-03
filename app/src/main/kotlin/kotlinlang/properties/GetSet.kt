@@ -37,8 +37,3 @@ private class CustomGetter {
     val yearOfBirth: Int
         get() = Year.now().value - age
 }
-
-fun main() {
-    val c = CustomGetter()
-    c.setProperties()
-}

@@ -1,4 +1,4 @@
-package com.anouar.convention.tasks
+package convention.tasks
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction

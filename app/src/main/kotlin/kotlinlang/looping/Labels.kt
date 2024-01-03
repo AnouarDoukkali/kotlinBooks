@@ -1,6 +1,6 @@
 package kotlinlang.looping
 
-fun main() {
+fun labels() {
     outer@ for (i in 0..10) { // we can name the loop where we are
         for (j in 0..10) {
             if (i != 1) continue@outer // this will continue to next element whenever even number is encountered

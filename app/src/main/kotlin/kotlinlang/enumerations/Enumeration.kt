@@ -29,6 +29,7 @@ private enum class Direction(val notation: String) {
     South("S"),
     East("E"),
     West("W");
+
     val opposite: Direction
         get() = when (this) {
             North -> South
@@ -45,10 +46,4 @@ private fun enumCheck(color: Color) {
         Green -> println("Green boy")
         Blue -> println("Blue moon")
     }
-}
-
-fun main() {
-    val red = Color.Red // declaring an enum member
-    val blue = Blue // to use enum member directly we should import the enum in the current file
-    val blueCode = Blue.code
 }

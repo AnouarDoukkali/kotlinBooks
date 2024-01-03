@@ -1,5 +1,6 @@
 package kotlinlang.classes
 
-// the simplest way to create a class
-@Suppress("UnusedPrivateClass")
+/**
+ * A class can be declared without any constructor parameters.
+ */
 private class Giraffe

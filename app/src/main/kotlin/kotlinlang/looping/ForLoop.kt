@@ -24,14 +24,8 @@ private fun loopingRange() {
     }
 }
 
-fun progressionVSRange(r: IntProgression = 0..10) { // IntProgression is superClass of IntRange
+private fun progressionVSRange(r: IntProgression = 0..10) { // IntProgression is superClass of IntRange
     for (i in r) {
         println(i)
     }
-}
-
-fun main() {
-    val s = "abc"
-
-    println('c' + 1)
 }

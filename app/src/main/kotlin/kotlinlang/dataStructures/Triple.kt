@@ -11,7 +11,3 @@ private fun tripleDestructionDeclaration() {
     val (first, second, third) = triple
     println("first :$first, second :$second, third :$third")
 }
-
-fun main() {
-    tripleDestructionDeclaration()
-}

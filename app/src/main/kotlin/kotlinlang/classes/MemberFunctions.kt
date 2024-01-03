@@ -14,10 +14,3 @@ private class HedgeHog {
 
 // Top-level functions exist by themselves and are not part of a class
 private fun topLevelFunction() = println("this is a top level function")
-
-fun main() {
-    // class HedgeHog instantiation
-    val hedgehog = HedgeHog()
-    // call a member function 'accessMember' that access another member function 'memberFunction'
-    hedgehog.accessMember()
-}

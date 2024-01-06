@@ -1,13 +1,12 @@
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
-import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.dokka.DokkaConfiguration.Visibility
 import org.jetbrains.dokka.gradle.DokkaTaskPartial
 
 plugins {
     alias(libs.plugins.dependencyUpdates)
-    alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
     alias(libs.plugins.kotlin)
+    alias(libs.plugins.detekt) apply false
 }
 
 group = "org.anouar.kotlinBooks"
@@ -17,22 +16,22 @@ description = "Kotlin Books code examples"
 kotlin {
     jvmToolchain(libs.versions.java.get().toInt())
 }
-dependencies {
-    detektPlugins(libs.bundles.detekt)
-}
+// dependencies {
+//     detektPlugins(libs.bundles.detekt)
+// }
 
-detekt {
-    source.setFrom(file(projectDir))
-    parallel = true
-    autoCorrect = true
-    // baseline = file("$rootDir/config/detekt/baseline.xml")
-    tasks.withType<Detekt> {
-        exclude("**/resources/**")
-        exclude("**/build/**")
-        include("**/*.kt")
-        include("**/*.kts")
-    }
-}
+// detekt {
+//     source.setFrom(file(projectDir))
+//     parallel = true
+//     autoCorrect = true
+//     // baseline = file("$rootDir/config/detekt/baseline.xml")
+//     tasks.withType<Detekt> {
+//         exclude("**/resources/**")
+//         exclude("**/build/**")
+//         include("**/*.kt")
+//         include("**/*.kts")
+//     }
+// }
 
 tasks.withType<DependencyUpdatesTask> {
     checkForGradleUpdate = true

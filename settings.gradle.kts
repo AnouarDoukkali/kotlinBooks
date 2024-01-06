@@ -1,6 +1,7 @@
 // enableFeaturePreview("STABLE_CONFIGURATION_CACHE") --give warning when building the file
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         mavenCentral()
         gradlePluginPortal()

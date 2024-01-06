@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.dokka)
     alias(libs.plugins.kotlin)
+    id("DetektConventionPlugin")
     application
 }
 

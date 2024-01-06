@@ -30,6 +30,8 @@ kotest-properties = { module = "io.kotest:kotest-property", version.ref = "kotes
 logging-kotlin = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
 logging-slf4j = { module = "org.slf4j:slf4j-log4j12", version.ref = "slf4j" }
 
+detekt-gradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+
 [bundles]
 logging = ["logging-kotlin", "logging-slf4j"]
 kotest = ["kotest-runner", "kotest-assertion", "kotest-properties"]

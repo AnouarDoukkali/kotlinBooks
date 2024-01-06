@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        mavenCentral()
     }
 }
 
@@ -14,4 +15,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "buildSrc"
+rootProject.name = "build-logic"
+include(":convention")

@@ -2,9 +2,10 @@ plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
 }
-// necessary to access version catalog directly in pre-compiled scripts
+
 dependencies {
-    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    implementation(libs.kotlin)
+    implementation(libs.dependencyUpdates)
 }
 
 // defining the plugins being built
@@ -19,4 +20,12 @@ gradlePlugin {
             implementationClass = "convention.plugins.KotestCustomPlugin"
         }
     }
+}
+
+tasks.register<Copy>("copyPreCommitHook") {
+    description = "Copy pre-commit git hook from the scripts to the .git/hooks folder."
+    group = "git hooks"
+    outputs.upToDateWhen { false }
+    from("$rootDir/bashScripts/pre-commit")
+    into("../.git/hooks/")
 }

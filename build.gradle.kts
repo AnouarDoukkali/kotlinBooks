@@ -1,13 +1,12 @@
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.dokka.DokkaConfiguration.Visibility
 import org.jetbrains.dokka.gradle.DokkaTaskPartial
 
 plugins {
-    alias(libs.plugins.dependencyUpdates)
     alias(libs.plugins.detekt)
     alias(libs.plugins.dokka)
-    alias(libs.plugins.kotlin)
+    id("KotlinConvention")
+    id("DependencyUpdateConvention")
 }
 
 group = "org.anouar.kotlinBooks"
@@ -15,8 +14,9 @@ version = "v1.0.0"
 description = "Kotlin Books code examples"
 
 kotlin {
-    jvmToolchain(libs.versions.java.get().toInt())
+    jvmToolchain(21)
 }
+
 dependencies {
     detektPlugins(libs.bundles.detekt)
 }
@@ -31,20 +31,6 @@ detekt {
         exclude("**/build/**")
         include("**/*.kt")
         include("**/*.kts")
-    }
-}
-
-tasks.withType<DependencyUpdatesTask> {
-    checkForGradleUpdate = true
-    gradleReleaseChannel = "current"
-    fun isNonStable(version: String): Boolean {
-        val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
-        val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-        val isStable = stableKeyword || regex.matches(version)
-        return isStable.not()
-    }
-    rejectVersionIf {
-        isNonStable(candidate.version)
     }
 }
 

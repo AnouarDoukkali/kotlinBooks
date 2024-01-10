@@ -4,8 +4,10 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.kotlin)
-    implementation(libs.dependencyUpdates)
+    implementation(libs.kotlin.module)
+    implementation(libs.dependencyUpdates.module)
+    implementation(libs.detekt.module)
+    implementation(libs.dokka.module)
 }
 
 // defining the plugins being built

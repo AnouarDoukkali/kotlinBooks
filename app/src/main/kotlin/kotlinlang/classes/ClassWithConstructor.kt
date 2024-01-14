@@ -15,7 +15,7 @@ package kotlinlang.classes
  * @author Anouar Doukkali
  * @since v1.0.0
  */
-internal class ClassWithConstructor(private val property1: String, private val property2: Int = 0) {
+class ClassWithConstructor(private val property1: String, private val property2: Int = 0) {
     /**
      * Speaks the name and age of the alien species.
      *@return A string containing the class properties.

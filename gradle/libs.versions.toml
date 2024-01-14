@@ -11,21 +11,21 @@ dokka = "1.9.10"
 
 
 [plugins]
-dependencyUpdatesGradlePlugin = { id = "com.github.ben-manes.versions", version.ref = "dependencyUpdates" }
-kotlinGradlePlugin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dependencyUpdates = { id = "com.github.ben-manes.versions", version.ref = "dependencyUpdates" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 toolchainsResolver = { id = "org.gradle.toolchains.foojay-resolver-convention", version.ref = "toolchainsResolver" }
-detektGradlePlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-dokkaGradlePlugin = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 
 [libraries]
 #kotlin
-kotlin-Module = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 #dokka
-dokka-module = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
+dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version.ref = "dokka" }
 #dependencyUpdates
-dependencyUpdates-Module = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "dependencyUpdates" }
+dependencyUpdates = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "dependencyUpdates" }
 #detekt
-detekt-module = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 detekt-Formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 detekt-rulesLib = { module = "io.gitlab.arturbosch.detekt:detekt-rules-libraries", version.ref = "detekt" }
 detekt-rulesAuthor = { module = "io.gitlab.arturbosch.detekt:detekt-rules-ruleauthors", version.ref = "detekt" }

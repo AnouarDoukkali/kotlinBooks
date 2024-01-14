@@ -2,7 +2,7 @@ package kotlinlang.classes
 
 // a function that belongs to a class is called member function
 
-private class HedgeHog {
+class MemberFunctions {
     private fun memberFunction() {
         println("this is a member function")
     }
@@ -13,4 +13,4 @@ private class HedgeHog {
 }
 
 // Top-level functions exist by themselves and are not part of a class
-private fun topLevelFunction() = println("this is a top level function")
+fun topLevelFunction() = println("this is a top level function")

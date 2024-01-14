@@ -1,14 +1,10 @@
 plugins {
-    id("KotlinConvention")
-    id("DependencyUpdateConvention")
-    id("DetektConvention")
-    id("DokkaConvention")
+    alias(libs.plugins.kotlin) apply false
+    alias(libs.plugins.dokka) apply false
+    alias(libs.plugins.detekt) apply false
+    id("anouar.plugins.CommonConvention")
 }
 
 group = "org.anouar.kotlinBooks"
-version = "v1.0.0"
+version = "v0.1.0"
 description = "Kotlin Books code examples"
-
-kotlin {
-    jvmToolchain(21)
-}

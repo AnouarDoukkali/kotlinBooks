@@ -16,8 +16,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 rootProject.name = "kotlinBooks"
-include("app")
-include("model")
-include("view")
+include(":app")

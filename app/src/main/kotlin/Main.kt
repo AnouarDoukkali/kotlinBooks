@@ -8,9 +8,8 @@ import io.github.oshai.kotlinlogging.KotlinLogging
  * Since: v1.0.0
  */
 
-private val log = KotlinLogging.logger {}
+internal val logger = KotlinLogging.logger {}
 
-internal fun main() {
-    println("Hello World!")
-    log.info { "hello from logger " }
+fun main() {
+    logger.info { "Hello, World!" }
 }

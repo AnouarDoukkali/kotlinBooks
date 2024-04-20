@@ -1,3 +1,10 @@
+/**
+ * File: MemberProperties.kt
+ * Author: Anouar Doukkali
+ * Created on:  4/20/2024 9:01 AM
+ * Description: Demonstrate the use of member properties in Kotlin.
+ * Since: v0.1.0
+ */
 package kotlinlang.classes
 
 /**

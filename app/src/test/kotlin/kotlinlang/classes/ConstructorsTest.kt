@@ -8,13 +8,17 @@
 package kotlinlang.classes
 
 import io.kotest.core.annotation.Tags
-import io.kotest.core.spec.style.StringSpec
+import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldNotBe
 
 @Tags("unitTest")
-internal class ConstructorsTest : StringSpec({
-    "Constructors should initialize with provided properties" {
-        val constructors = Constructors("property1", 1)
-        constructors shouldNotBe null
+internal class ConstructorsTest : BehaviorSpec({
+    Given("a class") {
+        When("it is initialized with provided properties") {
+            val constructors = Constructors("property1", 1)
+            Then("it should not be null") {
+                constructors shouldNotBe null
+            }
+        }
     }
 })

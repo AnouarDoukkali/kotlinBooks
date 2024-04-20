@@ -8,23 +8,37 @@
 package kotlinlang.classes
 
 import io.kotest.core.annotation.Tags
-import io.kotest.core.spec.style.StringSpec
+import io.kotest.core.spec.IsolationMode
+import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 
 @Tags("unitTest")
-internal class MemberPropertiesTest : StringSpec({
+internal class MemberPropertiesTest : BehaviorSpec({
+    isolationMode = IsolationMode.InstancePerLeaf
 
-    "name property should be initialized with a value" {
+    Given("a MemberP  isolationMode = IsolationMode.InstancePerLeaf") {
         val memberProperties = MemberProperties()
-        memberProperties.name = "Anouar"
-        memberProperties.name shouldBe "Anouar"
-    }
-    "name property should throw an exception when accessed before initialization" {
-        val memberProperties = MemberProperties()
-        try {
-            memberProperties.name
-        } catch (e: UninitializedPropertyAccessException) {
-            e.message shouldBe "lateinit property name has not been initialized"
+
+        When("name property is initialized with a value") {
+            memberProperties.name = "Anouar"
+
+            Then("it should return the initialized value") {
+                memberProperties.name shouldBe "Anouar"
+            }
+        }
+
+        When("name property is accessed before initialization") {
+            var message: String? = null
+            try {
+                memberProperties.name
+            } catch (e: UninitializedPropertyAccessException) {
+
+                message = e.message
+            }
+
+            Then("it should throw an UninitializedPropertyAccessException") {
+                message shouldBe "lateinit property name has not been initialized"
+            }
         }
     }
 })

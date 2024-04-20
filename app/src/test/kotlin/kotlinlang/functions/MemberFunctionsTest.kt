@@ -8,13 +8,17 @@
 package kotlinlang.functions
 
 import io.kotest.core.annotation.Tags
-import io.kotest.core.spec.style.StringSpec
+import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 
 @Tags("unitTest")
-internal class MemberFunctionsTest : StringSpec({
-    "accessMember should return correct string when called with name Anouar" {
-        val memberFunctions = MemberFunctions("Anouar")
-        memberFunctions.accessAnotherMember() shouldBe "your name is: Anouar"
+class MemberFunctionsTest : BehaviorSpec({
+    given("a class MemberFunction") {
+        When("instanciated with name Anouar") {
+            val memberFunctions = MemberFunctions("Anouar")
+            Then("accessAnotherMember  should return correct string") {
+                memberFunctions.accessAnotherMember() shouldBe "your name is: Anouar"
+            }
+        }
     }
 })

@@ -2,7 +2,7 @@
  * File: SimpleDataClass.kt
  * Author: Anouar Doukkali
  * Created on:  1/15/2024 6:31 AM
- * Description:
+ * Description: A simple data class that holds a name and an age
  * Since: v0.1.0
  */
 

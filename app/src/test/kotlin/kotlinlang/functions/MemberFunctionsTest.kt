@@ -7,9 +7,11 @@
  */
 package kotlinlang.functions
 
+import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
+@Tags("unitTest")
 internal class MemberFunctionsTest : StringSpec({
     "accessMember should return correct string when called with name Anouar" {
         val memberFunctions = MemberFunctions("Anouar")

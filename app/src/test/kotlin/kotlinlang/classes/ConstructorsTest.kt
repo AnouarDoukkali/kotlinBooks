@@ -7,9 +7,11 @@
  */
 package kotlinlang.classes
 
+import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldNotBe
 
+@Tags("unitTest")
 internal class ConstructorsTest : StringSpec({
     "Constructors should initialize with provided properties" {
         val constructors = Constructors("property1", 1)

@@ -7,9 +7,11 @@
  */
 package kotlinlang.classes
 
+import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
+@Tags("unitTest")
 internal class MemberPropertiesTest : StringSpec({
 
     "name property should be initialized with a value" {

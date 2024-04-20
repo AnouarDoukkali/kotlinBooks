@@ -7,9 +7,11 @@
  */
 package kotlinlang.functions
 
+import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 
+@Tags("unitTest")
 internal class TopLevelFunctionsKtTest : StringSpec({
 
     "topLevelFunction should return correct string" {

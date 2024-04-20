@@ -7,9 +7,11 @@
  */
 package kotlinlang.classes
 
+import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.types.shouldBeInstanceOf
 
+@Tags("unitTest")
 class SimpleClassTest : StringSpec({
 
     "SimpleClass instance creation" {

@@ -10,6 +10,9 @@ pluginManagement {
     }
     includeBuild("build-logic")
 }
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+}
 
 dependencyResolutionManagement {
     @Suppress("UnstableApiUsage")
@@ -20,3 +23,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "kotlinBooks"
 include("app")
+include("unit")
+include("unitTest")
+include("app:unitTest")
+findProject(":app:unitTest")?.name = "unitTest"

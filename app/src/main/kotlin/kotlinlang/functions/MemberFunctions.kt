@@ -5,28 +5,21 @@
  * Description:
  * Since: v0.1.0
  */
-package kotlinlang.classes
+package kotlinlang.functions
 
-internal class MemberFunctions {
+internal class MemberFunctions(private val name: String) {
     /**
      * Member functions are functions that are defined inside a class or object.
-     * @return a hard coded string
+     * @return hard coded string
      */
     @Suppress("FunctionOnlyReturningConstant")
-    private fun memberFunction(): String = "this is a member function"
+    private fun memberFunction(): String = "your name is: $name"
 
     /**
      * Member functions can access member properties and other member functions of the same class.
-     * @return a return from another member function
+     * @return another member function
      */
-    fun accessMember(): String {
+    fun accessAnotherMember(): String {
         return memberFunction() // reference to a member function in the same class
     }
 }
-
-/**
- * Top-level functions exist by themselves and are not part of a class
- * @return a hard coded string
- */
-@Suppress("FunctionOnlyReturningConstant")
-internal fun topLevelFunction(): String = "this is a top-level function"

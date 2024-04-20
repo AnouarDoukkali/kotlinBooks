@@ -13,12 +13,4 @@ package kotlinlang.classes
  * @property property2 The second property of the class with a default value.
  * @constructor Creates a new instance of ClassWithConstructor by taking property1 and property2 as parameters.
  */
-internal class ClassWithConstructor(private val property1: String, private val property2: Int = 0) {
-    /**
-     * A function that returns a string representation of all class properties.
-     * @return A string containing the class properties.
-     */
-    fun printClassProperties(): String {
-        return "property1: $property1 , property2: $property2"
-    }
-}
+internal class Constructors(private val property1: String, private val property2: Int = 0)

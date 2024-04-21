@@ -28,7 +28,7 @@ class ListsTest : BehaviorSpec({
         }
     }
 
-    // demonssrates the use of the '+= sign' to add an element to an immutable list
+    // demonsrates the use of the '+= sign' to add an element to an immutable list
     Given("an immutable list") {
         var immutable = listOf(1, 2, 3)
         When("using '+= signe' to add a new element") {

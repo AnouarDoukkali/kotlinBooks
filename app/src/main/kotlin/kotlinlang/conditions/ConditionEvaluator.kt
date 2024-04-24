@@ -1,11 +1,10 @@
-/**
- * File: ConditionEvaluator.kt
+package kotlinlang.conditions
+/* File: ConditionEvaluator.kt
  * Author: Anouar Doukkali
  * Created on:  4/20/2024 10:24 AM
  * Description: This class encapsulates the evaluation of various conditions.
  * Since: v0.1.0
  */
-package kotlinlang.conditions
 
 /**
  * This class encapsulates the evaluation of various conditions.
@@ -28,6 +27,7 @@ class ConditionEvaluator(private val number: Int?, private val first: String, pr
                 println("it's an int")
                 println(number)
             }
+
             null -> println("it's a null")
             else -> println("something else")
         }

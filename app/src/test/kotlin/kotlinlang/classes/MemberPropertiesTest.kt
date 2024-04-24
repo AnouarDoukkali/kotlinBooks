@@ -1,5 +1,4 @@
-/**
- * File: MemberPropertiesTest.kt
+/* File: MemberPropertiesTest.kt
  * Author: Anouar Doukkali
  * Created on: 4/19/2024 3:36 PM
  * Description:
@@ -7,38 +6,49 @@
  */
 package kotlinlang.classes
 
+import io.kotest.assertions.throwables.shouldThrow
+import io.kotest.assertions.throwables.shouldThrowUnit
 import io.kotest.core.annotation.Tags
-import io.kotest.core.spec.IsolationMode
-import io.kotest.core.spec.style.BehaviorSpec
+import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
 
 @Tags("unitTest")
-internal class MemberPropertiesTest : BehaviorSpec({
-    isolationMode = IsolationMode.InstancePerLeaf
+internal class MemberPropertiesTest : DescribeSpec({
+    describe("a class") {
 
-    Given("a MemberP  isolationMode = IsolationMode.InstancePerLeaf") {
-        val memberProperties = MemberProperties()
-
-        When("name property is initialized with a value") {
-            memberProperties.name = "Anouar"
-
-            Then("it should return the initialized value") {
-                memberProperties.name shouldBe "Anouar"
-            }
+        it("can have private properties") {
+            val privateMembers = PrivatMembers(prop1 = 10)
+            privateMembers.getPrivateProp() shouldBe 10
         }
 
-        When("name property is accessed before initialization") {
-            var message: String? = null
-            try {
-                memberProperties.name
-            } catch (e: UninitializedPropertyAccessException) {
+        it("can validate properties inside init block") {
+            val error = shouldThrow<IllegalArgumentException> { PreConditionClass(age = 0) }
+            error.message shouldBe "Age must be greater than 18"
+        }
+    }
 
-                message = e.message
-            }
+    describe("a class with custom getter and setter") {
+        val customGetterSetter = CustomGetterSetter(name = "Anouar")
 
-            Then("it should throw an UninitializedPropertyAccessException") {
-                message shouldBe "lateinit property name has not been initialized"
+        it("can have parameters in constructor to initialize properties") {
+            val error = shouldThrow<IllegalArgumentException> { CustomGetterSetter(name = "") }
+            error.message shouldBe "Name cannot be empty"
+        }
+
+        it("can have custom getter") {
+            customGetterSetter.name shouldBe "Anouar is a kotlin developer!"
+        }
+
+        it("can have custom setter") {
+            customGetterSetter.name = "Anouar Doukkali"
+            customGetterSetter.name shouldBe "Anouar Doukkali is a kotlin developer!"
+        }
+
+        it("can validate setter") {
+            val error = shouldThrowUnit<IllegalArgumentException> {
+                customGetterSetter.name = ""
             }
+            error.message shouldBe "Name cannot be empty"
         }
     }
 })

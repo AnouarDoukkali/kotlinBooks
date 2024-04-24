@@ -1,16 +1,22 @@
-/**
- * File: ClassWithConstructor.kt
+package kotlinlang.classes
+/* File: ClassWithConstructor.kt
  * Author: Anouar Doukkali
  * Created on:  1/3/2024 10:26 AM
- * Description: Demonstrate the use of a class with a primary constructor.
+ * Description: This file demonstrates how to create classes with constructors in Kotlin.
  * @since: v0.1.0
  */
-package kotlinlang.classes
 
 /**
- * Represents a class with a primary constructor.
- * @property property1 The first property of the class declared as private.
- * @property property2 The second property of the class with a default value.
- * @constructor Creates a new instance of ClassWithConstructor by taking property1 and property2 as parameters.
+ * This is a class with a default constructor.
+ * It does not have any properties or methods.
  */
-internal class Constructors(private val property1: String, private val property2: Int = 0)
+internal class DefaultConstructor
+
+/**
+ * This is a class with a primary constructor.
+ * It has two properties: prop1 and prop2.
+ *
+ * @property prop1 A string property.
+ * @property prop2 An integer property with a default value of 0.
+ */
+internal class PrimaryConstructor(val prop1: String, val prop2: Int = 0)

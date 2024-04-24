@@ -12,4 +12,5 @@ internal val logger = KotlinLogging.logger {}
 
 fun main() {
     logger.info { "Hello, World!" }
+    println(Double.MAX_VALUE + Double.MAX_VALUE)
 }

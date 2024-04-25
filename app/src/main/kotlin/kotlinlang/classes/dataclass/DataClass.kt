@@ -1,4 +1,4 @@
-package kotlinlang.classes.types
+package kotlinlang.classes.dataclass
 /* File: SimpleDataClass.kt
  * Author: Anouar Doukkali
  * Created on:  1/15/2024 6:31 AM

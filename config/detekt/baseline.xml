@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <SmellBaseline>
     <CurrentIssues>
+        <Issue>
+            <ID>Filename</ID>
+            <Message>Matching Declaration Name</Message>
+            <Severity>0</Severity>
+            <File>src/main/kotlin/kotlinlang/classes/enumeration/Enumeration.kt</File>
+            <Line>12</Line>
+            <Column>21</Column>
+        </Issue>
     </CurrentIssues>
 </SmellBaseline>

@@ -5,7 +5,7 @@
  * Description:
  * Since: v0.1.0
  */
-package kotlinlang.classes.types
+package kotlinlang.classes.dataclass
 
 import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.DescribeSpec

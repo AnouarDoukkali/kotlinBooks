@@ -1,29 +1,35 @@
+@file:Suppress("unused")
+
 package kotlinlang.extensions
 
-import java.util.*
-
-/**
-adding an extension count to the Class String
-to work with this extension in another package , you should import it as kotlin lang.functions.count
+/* File: ExtensionFunctions.kt
+ * Author: Anouar Doukkali
+ * Created on:  4/26/2024 12:30 PM
+ * Description: this file demonstrates the use of extension functions in Kotlin
+ * Since: v0.1.0
  */
-private fun String.simpleCount() {
-    println("$this contains ${this.length} elements") // we reference to the concerned element by this
+import logger
+
+// a class that will be extended
+private class ToExtent(val name: String)
+
+// extension function of the class
+private fun ToExtent.addExtension() {
+    logger.debug { "this is an extension function that, it can act like a member function" }
+    logger.debug { "it can access the members of the class as well: ${this.name}" }
 }
 
-// we can apply another extension to an existing extension
-private fun String.advancedCount() {
-    println("////")
-    this.uppercase(Locale.getDefault()).simpleCount() // apply a change to the element
-    simpleCount() // we can omit the word this here , apply other extension function
-    println("////")
-}
-// ----------------------------------------------------------------------
+// check if a nullable ToExtent object is null
+private fun ToExtent?.isNull(): Boolean = this == null
 
-private class Animal(val name: String = "", val age: Int = 0) {
-    fun roar() = "hello $name"
+// generic extension function
+private fun <T> ToExtent.genericExtensionFunction(value: T) {
+    logger.debug { "this is a generic extension function, it can be used with any type: $value" }
+    logger.debug { "calling another extension function from this extension function: ${this.addExtension()}" }
 }
 
-// extension functions can be private like member functions
-private fun Animal.information() {
-    println("name ${this.name} age: ${this.age}")
+private fun main() {
+    val toExtent = ToExtent("anouar")
+    toExtent.addExtension()
+    toExtent.genericExtensionFunction(10)
 }

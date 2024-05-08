@@ -1,22 +1,24 @@
+@file:Suppress("unused")
+
 package kotlinlang.functions
 
+/* File: SimpleFunction.kt
+ * Author: Anouar Doukkali
+ * Created on:  4/26/2024 3:18 PM
+ * Description: Simple Functions in Kotlin.
+ * Since: v0.1.0
+ */
+import logger
+
 // The combination of name, parameters and return type is called the function signature.
-private fun simpleFunction(param1: Int, param2: Int, name: String = "default value"): Int {
-    val expression = param1 + param2
-    return expression + name.length
+private fun simpleFunction(param1: Int, param2: Int): Int {
+    return param1 + param2
 }
 
 private fun unitReturn() {
-    println("a function that does not have a defined return type is returning Unit by default")
-    return Unit
+    logger.debug { "a function that does not have a defined return type is returning Unit by default" }
 }
 
 private fun neverReturn(): Nothing {
     error("never return")
 }
-
-private fun oneLineReturn(a: Int, b: Int) = """
-    | Kotlin infers the return type of a function
-    | that has an expression body. ${a + b}
-    | 
-""".trimMargin()

@@ -1,14 +1,20 @@
+@file:Suppress("unused", "UnusedReceiverParameter")
+
 package kotlinlang.functions
 
+import logger
+
+@Suppress("kotlin:S1144")
 private class OverLoaded {
-    fun greeting() {
-        println("hello")
+    private fun greeting() {
+        logger.debug { "hello" }
     }
 
-    fun greeting(name: String) { // When overloading functions, the parameter lists must be unique
-        println("hello $name")
+    // When overloading functions, parameter lists must be unique
+    private fun greeting(name: String) {
+        logger.info { "hello $name" }
     }
 }
 
-// if extension function has the signature of member function ,which is nonsense , kotlin prioritize member function
+// kotlin will prioritize member function over extension functions unless it is private
 private fun OverLoaded.greeting(name: String) = println("extension function :  $name")

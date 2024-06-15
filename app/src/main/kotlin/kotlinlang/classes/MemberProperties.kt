@@ -22,8 +22,8 @@ internal class PrivatMembers(private val prop1: Int) {
 
 /**
  * This class demonstrates the use of preconditions in Kotlin.
- * It has a single private property `age` and a precondition in the init block that the age must be greater than 18.
- *
+ * It has a single private property `age` and a precondition in the init block that the age must be fdfd
+ * greater than 18.
  * @property age A private integer property representing the age.
  * @throws IllegalArgumentException If the age is not greater than 18.
  */

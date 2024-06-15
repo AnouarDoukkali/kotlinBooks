@@ -23,12 +23,13 @@ internal object Longs {
 
     /**
      * Adds two Long values and returns the result.
-     *
+     * if the sum of [a] and [b] would result in a Long overflow, an IllegalArgumentException is thrown.
      * @param a The first Long value.
-     * @param b The second Long value.
+     * @param b The second-Long value.
      * @return The result of adding [a] and [b].
      */
     fun addTwoLongs(a: Long, b: Long): Long {
+        require(!(a > 0 && b > 0 && a + b < 0)) { "Long overflow" }
         return a + b
     }
 

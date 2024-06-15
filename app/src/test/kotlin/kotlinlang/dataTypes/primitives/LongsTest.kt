@@ -36,7 +36,6 @@ class LongsTest : DescribeSpec({
         }
         it("calling addTwoLongs should prevent overflow") {
             val max = Long.MAX_VALUE
-
             val result = shouldThrow<IllegalArgumentException> {
                 Longs.addTwoLongs(max, max)
             }

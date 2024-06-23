@@ -12,7 +12,7 @@ import io.kotest.matchers.equals.shouldBeEqual
 import io.kotest.matchers.shouldBe
 
 @Tags("unitTest")
-class SetsTest : BehaviorSpec({
+internal class SetsTest : BehaviorSpec({
 
     Given("two sets") {
         val set = setOf(1, 1, 2, 3, 4, 4, 5, 7, 10, 10)

@@ -13,9 +13,9 @@ import io.kotest.matchers.types.shouldBeInstanceOf
 
 @Tags("unitTest")
 internal class ConstructorsTest : DescribeSpec({
-    context("a class") {
+    describe("a class") {
 
-        it("can be instantiated with no constructor") {
+        it("can be instantiated with an empty constructor") {
             val defaultConstructor = DefaultConstructor()
             defaultConstructor.shouldBeInstanceOf<DefaultConstructor>()
         }

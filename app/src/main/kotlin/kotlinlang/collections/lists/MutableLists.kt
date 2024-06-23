@@ -13,7 +13,7 @@ package kotlinlang.collections.lists
  */
 @Suppress("unused")
 private fun initializeMutableLists() {
-    val default = MutableList(5) { it } // a mutable list of Int instances with default size and values of '0's
+    val default = MutableList(5) { it } // a mutable list of Int instances with default size and values of indexes
     val a = mutableListOf("A", "B", "C", "D", "E") // a mutable list of String instances
     val b = mutableListOf<Int>() // empty list of Int
     val c: MutableList<String> = mutableListOf() // empty list of String

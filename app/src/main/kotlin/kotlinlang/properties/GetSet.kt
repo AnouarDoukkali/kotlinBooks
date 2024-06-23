@@ -1,7 +1,16 @@
+@file:Suppress("unused")
+
 package kotlinlang.properties
 
+import kotlinlang.special.klog
 import java.time.Year
 
+/* File: GetSet.kt
+ * Author: Anouar Doukkali
+ * Created on:  6/22/2024 3:57 AM
+ * Description: this file demonstrates the use of getters and setters in Kotlin
+ * Since: v0.1.0
+ */
 private class CustomGetter {
     var name: String = "anouar"
         get() {
@@ -36,4 +45,10 @@ private class CustomGetter {
     // we can use properties instead of functions to make simple calculations related to other properties
     val yearOfBirth: Int
         get() = Year.now().value - age
+}
+
+private fun main() {
+    val cgs = CustomGetter()
+    // cgs.name = "bob" - can't set private setter
+    klog.debug { cgs.address } // can access only the public getter
 }

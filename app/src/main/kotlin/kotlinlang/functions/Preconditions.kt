@@ -1,6 +1,7 @@
 @file:Suppress("unused")
 
 package kotlinlang.functions
+
 /* File: Preconditions.kt
  * Author: Anouar Doukkali
  * Created on:  4/26/2024 10:15 AM

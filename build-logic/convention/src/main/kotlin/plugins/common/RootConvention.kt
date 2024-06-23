@@ -13,7 +13,7 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.Copy
 import org.gradle.kotlin.dsl.register
 
-@Suppress("ClassIndependentOfModule", "ClassUnconnectedToPackage")
+@Suppress("ClassIndependentOfModule", "ClassUnconnectedToPackage", "unused")
 internal class RootConvention : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {

@@ -1,11 +1,11 @@
-/**
+package kotlinlang.dataTypes.primitives
+/*
  * File: Chars.kt
  * Author: Anouar Doukkali
  * Created on:  4/22/2024 10:27 AM
  * Description: This file contains examples of the `Char` type in Kotlin
  * Since: v0.1.0
  */
-package kotlinlang.dataTypes.primitives
 
 /**
  * A class that provides utility functions for the `Char` type.

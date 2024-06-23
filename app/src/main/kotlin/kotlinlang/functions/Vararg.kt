@@ -2,7 +2,7 @@
 
 package kotlinlang.functions
 
-import logger
+import kotlinlang.special.klog
 
 /* File: Vararg.kt
  * Author: Anouar Doukkali
@@ -12,22 +12,22 @@ import logger
  */
 
 // Vararg is a keyword in Kotlin that allows you to pass a variable number of arguments to a function.
-// you can make the last parameter of a function a vararg parameter
+// usually vararg is placed at the end of the parameter list.
 private fun sumOfNumbers(param1: Int, param2: Int, vararg numbers: Int) {
     for (n in numbers) {
-        logger.debug { n }
+        klog.debug { n }
     }
 }
 
 // we can spread a vararg parameter since it is an array of Array<out T>
 private fun <T> spredVararg(vararg elements: T) {
     val list = listOf(*elements)
-    logger.debug { list }
+    klog.debug { list }
 }
 
 @Suppress("SpreadOperator")
 // we can spread a vararg parameter if it is an array of primitive using toTypedArray()
 private fun spreadPrimitiveVararg(vararg elements: Int) {
     val list = listOf(*elements.toTypedArray())
-    logger.debug { list }
+    klog.debug { list }
 }

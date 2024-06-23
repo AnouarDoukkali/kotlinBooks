@@ -12,14 +12,14 @@ internal object Floats {
      *
      * @return The minimum value a Float can have, which is [Float.MIN_VALUE].
      */
-    fun floatMinValue() = Float.MIN_VALUE
+    fun floatMinValue() = Float.MIN_VALUE // 1.4E-45
 
     /**
      * Returns the maximum value a Float can have.
      *
      * @return The maximum value a Float can have, which is [Float.MAX_VALUE].
      */
-    fun floatMAXValue() = Float.MAX_VALUE
+    fun floatMAXValue() = Float.MAX_VALUE // 3.4028235E38
 
     /**
      * Adds two Float values and returns the result.

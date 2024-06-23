@@ -21,8 +21,8 @@ internal class DataClassesTest : DescribeSpec({
         }
 
         it("has a  copy method") {
-            val copy = dataClass.copy()
-            copy shouldBe dataClass
+            val copiedDataClass = dataClass.copy()
+            copiedDataClass shouldBe dataClass
         }
 
         it("has a component1 method") {

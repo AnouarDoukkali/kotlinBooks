@@ -1,4 +1,4 @@
-@file:Suppress("unused")
+@file:Suppress("UNUSED_VARIABLE", "unused")
 
 package kotlinlang.collections.arrays
 
@@ -13,7 +13,8 @@ package kotlinlang.collections.arrays
 private fun arrays() {
     val preSizedArray = Array(5) { 0 }
     val arr = arrayOf(1, 2, 3)
-    val arr2 = arrayOfNulls<Int>(3)
+    val arr2 = arrayOfNulls<Any?>(3)
+    val arr22: Array<String?> = arrayOfNulls(4)
     val arr3 = Array(3) { it } // contain an array filled with index
     val arr4 = Array(3) { it * 2 } // contain an array filled with index * 2
     // we can spread an array using the spread operator

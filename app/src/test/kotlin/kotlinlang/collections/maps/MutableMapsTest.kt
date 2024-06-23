@@ -30,9 +30,9 @@ class MutableMapsTest : BehaviorSpec({
         }
 
         When("updating a key-value pair") {
-            map[2] = "deux"
+            map[2] = "dos"
             Then("the map should contain the updated key-value pair") {
-                map[2] shouldBe "deux"
+                map[2] shouldBe "dos"
             }
         }
 

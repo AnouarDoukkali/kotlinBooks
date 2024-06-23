@@ -1,7 +1,12 @@
-import io.github.oshai.kotlinlogging.KotlinLogging
+import kotlinlang.special.klog
 
-internal val logger = KotlinLogging.logger {}
+/* File: Main.kt
+ * Author: Anouar Doukkali
+ * Created on:  6/23/2024 3:36 AM
+ * Description: the main function of the application , we run it by ./gradlew app:run
+ * Since: v0.1.0
+ */
 
-fun main() {
-    logger.debug { "Hello, World!" }
+internal fun main() {
+    klog.info { "Hello World!" }
 }

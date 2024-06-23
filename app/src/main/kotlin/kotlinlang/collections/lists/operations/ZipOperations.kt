@@ -1,4 +1,7 @@
+@file:Suppress("unused")
+
 package kotlinlang.collections.lists.operations
+
 /* File: ZipOperations.kt
  * Author: Anouar Doukkali
  * Created on:  4/20/2024 9:10 AM

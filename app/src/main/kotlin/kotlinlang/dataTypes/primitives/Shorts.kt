@@ -14,12 +14,12 @@ internal object Shorts {
     /**
      * @return The maximum value of a `Short`.
      */
-    fun shortMAXValue() = Short.MAX_VALUE
+    fun shortMAXValue() = Short.MAX_VALUE // 32767
 
     /**
      * @return The minimum value of a `Short`.
      */
-    fun shortMINValue() = Short.MIN_VALUE
+    fun shortMINValue() = Short.MIN_VALUE // -32768
 
     /**
      * Adds two `Short` values together result as an Int.

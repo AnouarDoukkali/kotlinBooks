@@ -2,7 +2,7 @@
 
 package kotlinlang.functions
 
-import logger
+import kotlinlang.special.klog
 
 /*
  * File: TopLevelFunctions.kt
@@ -17,4 +17,4 @@ import logger
  * @return Unit
  */
 @Suppress("FunctionOnlyReturningConstant")
-internal fun topLevelFunction() = logger.debug { "this is a top-level function" }
+private fun topLevelFunction() = klog.debug { "this is a top-level function" }

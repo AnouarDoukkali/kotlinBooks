@@ -1,18 +1,15 @@
+@file:Suppress("unused")
+
 package kotlinlang.collections.lists.operations
+
+import kotlinlang.special.Person
+
 /* File: ListOperations.kt
  * Author: Anouar Doukkali
  * Created on:  4/20/2024 9:02 AM
  * Description: This file contains operations that can be performed on a list of Person objects.
  * Since: v0.1.0
  */
-
-/**
- * Data class representing a person with a name and age.
- *
- * @property name The name of the person.
- * @property age The age of the person.
- */
-internal data class Person(val name: String, val age: Int)
 
 /**
  * object  providing operations on lists of Person objects.

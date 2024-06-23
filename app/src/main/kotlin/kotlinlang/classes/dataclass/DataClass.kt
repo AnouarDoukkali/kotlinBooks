@@ -1,4 +1,5 @@
 package kotlinlang.classes.dataclass
+
 /* File: SimpleDataClass.kt
  * Author: Anouar Doukkali
  * Created on:  1/15/2024 6:31 AM
@@ -11,8 +12,9 @@ package kotlinlang.classes.dataclass
  * It has two properties: `name` and `age`.
  * `name` is a read-only (val) property of type String.
  * `age` is a mutable (var) property of type Int with a default value of 0.
- *
  * @property name The name of the person.
  * @property age The age of the person. Default value is 0.
+ *
+ * a data class has four methods: `equals()`, `hashCode()`, `toString()`, and `copy()`.
  */
 internal data class DataClass(val name: String, var age: Int = 0)

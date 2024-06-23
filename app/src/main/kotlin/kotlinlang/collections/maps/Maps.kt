@@ -13,7 +13,7 @@ package kotlinlang.collections.maps
  */
 @Suppress("unused")
 private fun maps() {
-    val map1 = mapOf(1 to "one", 2 to "two", 3 to "three")
+    val map1 = mapOf(1 to "one", 2 to "two", 3 to "three") // a map of type <Int, String>
 
     // more explicit type declaration
     val map2 = mapOf(Pair(1, "one"), Pair(2, "two"), Pair(3, "three"))

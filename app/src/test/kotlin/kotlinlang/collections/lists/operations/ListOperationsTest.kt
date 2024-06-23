@@ -9,6 +9,7 @@ package kotlinlang.collections.lists.operations
 import io.kotest.core.annotation.Tags
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
+import kotlinlang.special.Person
 
 @Tags("unitTest")
 internal class ListOperationsTest : DescribeSpec({

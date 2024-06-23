@@ -1,5 +1,12 @@
 package kotlinlang.dataTypes.primitives
 
+/* File: Bytes.kt
+ * Author: Anouar Doukkali
+ * Created on:  6/21/2024 10:53 AM
+ * Description: this file contains functions related to Byte data type in Kotlin
+ * Since: v0.1.0
+ */
+
 /**
  * A class that provides utility methods for the `Byte` type.
  */
@@ -7,12 +14,12 @@ internal object Bytes {
     /**
      * @return The maximum value of a `Byte`.
      */
-    fun byteMAXValue() = Byte.MAX_VALUE
+    fun byteMAXValue() = Byte.MAX_VALUE // 127
 
     /**
      * @return The minimum value of a `Byte`.
      */
-    fun byteMINValue() = Byte.MIN_VALUE
+    fun byteMINValue() = Byte.MIN_VALUE // -128
 
     /**
      * Adds two bytes together will result as an Int.

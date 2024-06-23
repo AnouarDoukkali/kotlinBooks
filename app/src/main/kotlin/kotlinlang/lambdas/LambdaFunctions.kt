@@ -1,22 +1,21 @@
 package kotlinlang.lambdas
 
-/* lambda functions is kind of generic for functions , it allows us to let the user implement custom logic
-of a specific function that can be part of a principal function parameters. */
+import kotlinlang.special.klog
 
-private fun <T> expectingLambda(str: String, process: (String) -> T): T {
-    println("inside expectingLambda body")
-    return process(str) // the lambda can do any type of processing since the result is generic
-}
+/* File: LambdaFunctions.kt
+ * Author: Anouar Doukkali
+ * Created on:  6/22/2024 2:26 AM
+ * Description: this file demonstrates the use of lambda functions in Kotlin
+ * Since: v0.1.0
+ */
 
-private inline fun <T> expectingLambda2(str: String, process: (String) -> T): T {
-    println("inside expectingLambda2 body")
-    return process(str)
-}
-// we could make expectingLambda even complicated by getting a type and return different type
-
-private fun <S, T> genericLambda(str: S, process: (S) -> T): T {
-    println("inside expectingLambda body")
-    return process(str) // the lambda can do any type of processing since the result is generic
+/**
+ *  lambda functions are anonymous functions that are defined first by their siganture only
+ *  the work for the lambda is defined later by the user using the curly braces
+ */
+@Suppress("SameParameterValue")
+private fun <T, R> expectingLambda(param: T, lambda: (T) -> R): R {
+    return lambda(param) // the work of lambda is defined later by the user
 }
 
 // implementing List.filter using lambda
@@ -24,14 +23,21 @@ private fun <T> List<T>.myFilter(process: (T) -> Boolean): List<T> {
     val newList = mutableListOf<T>()
 
     for (i in this) {
-        if (process(i)) {
+        if (process(i)) { // here we call the lambda function without really knowing what does it do
             newList.add(i)
         }
     }
     return newList
 }
 
-// a function that has the signature (String)->String
-private fun replaceIt(str: String): String {
-    return str.replace(oldChar = 'a', newChar = 'o')
+@Suppress("unused")
+private fun main() {
+    expectingLambda("anouar") {
+        // here it could be anything that return R , or any function that take T and return R
+        it.length // the return type R is different from the parameter it of type T
+    }
+
+    val list = listOf(1, 2, 3, 4, 5, 6, 7, 9)
+    val evenNumbers = list.myFilter { it % 2 == 0 } // the work of lambda function is defined here
+    klog.debug { evenNumbers }
 }

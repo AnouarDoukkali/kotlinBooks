@@ -16,4 +16,6 @@ private fun mutableMaps() {
     val map = mutableMapOf(1 to "one", 2 to "two", 3 to "three")
     val map3: MutableMap<Int, String> = mutableMapOf(1 to "one", 2 to "two", 3 to "three")
     val map4 = mutableMapOf(Pair("one", 1))
+    val map5: MutableMap<String, Int> = mutableMapOf()
+    val map6 = mutableMapOf<String, Int>()
 }

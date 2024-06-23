@@ -2,7 +2,7 @@
 
 package kotlinlang.dataTypes
 
-import logger
+import kotlinlang.special.klog
 
 /* File: Strings.kt
  * Author: Anouar Doukkali
@@ -13,11 +13,11 @@ import logger
 
 private fun stringTemplates() {
     val name = "anouar"
-    logger.debug { "printing the value of the variable name : $name" }
-    logger.debug { "escaping special characters by using backslach \$name " }
-    logger.debug { "printing special characters  quote:\" dollar:\$ " }
-    logger.debug { """   "we can escape single quotes inside triple quotes"  """ }
-    logger.debug {
+    klog.debug { "printing the value of the variable name : $name" }
+    klog.debug { "escaping special characters by using backslach \$name " }
+    klog.debug { "printing special characters  quote:\" dollar:\$ " }
+    klog.debug { """   "we can escape single quotes inside triple quotes"  """ }
+    klog.debug {
         """
             trimIndent   
             removes the common indentation in all lines.
